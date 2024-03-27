@@ -1,0 +1,8 @@
+<h1>URL Shortener<h1>
+
+<%= form_with model: Link.new do |form|  %>
+    <%= form.url_field :url , required: true, placeholder: "https://example.org.com", class: "rounded"%>
+    <%= form.button "Save", class: "px-3 py-1 bg-gray-100 rounded"%>
+<% end %>
+   
+<%= render @links%>
